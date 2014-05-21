@@ -2,17 +2,12 @@ package me.swing.jframe;
 
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Label;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 
 public class JFrame08 {
 	public static void main(String[] args) {
@@ -53,16 +48,4 @@ public class JFrame08 {
 		frame.setVisible(true);
 	}
 }
-class MyWin extends JFrame{
-	static int count;
-	public MyWin() {
-		super("새창");
-		setSize(300, 300);
-		JLabel lbl = new JLabel(++count + "");
-		add(lbl);
-		// setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE); // 아무것도하지 않는다.
-		// setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE); // 숨긴다. setVisible(false)와 같다.
-		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // 현재 창만 닫는다.
-		// setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // 모두 닫고 종료한다.
-	}
-}
+
